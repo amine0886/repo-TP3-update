@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const books = require('./db.json');
 const bodyParser = require('body-parser');
-const apiRouter = require('apiRouiter').router;
+const apiRouter = require('./apiRouter').router
 
 
 // Middleware

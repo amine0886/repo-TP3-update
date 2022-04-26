@@ -1,11 +1,12 @@
-import { Router } from 'express';
-import { register, login } from './routes/usersctrl';
+const express      = require('express');
+const usersctrl = require ('./routes/usersctrl');
 
-export const router = (function() {
-    var apiRouter = Router();
-    
-    apiRouter.route('/users/register/').post(register);
-    apiRouter.route('/users/login/').post(login);
+// routes
+exports.router = (function() {
+    const apiRouter = express.Router();
+
+    apiRouter.route('/users/register/').post(usersctrl.register);
+    apiRouter.route('/users/login/').post(usersctrl.login);
 
     return apiRouter;
 })();

@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const jwtUtils = require('../utils/');
+const jwt  = require('jsonwebtoken');
 const models = require('../models/');
 
 //les  routes
